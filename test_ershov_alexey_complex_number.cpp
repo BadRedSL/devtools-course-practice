@@ -43,8 +43,8 @@ TEST(ershov_alexey_complex_number_test, complex_no_exception_multiply) {
   double a_re = 10, a_im = 10;
   double b_re = 20, b_im = 20;
 
-  ComplexNumber a(10, 10);
-  ComplexNumber b(20, 20);
+  ComplexNumber a(a_re, a_im);
+  ComplexNumber b(b_re, b_im);
 
   EXPECT_NO_THROW(a * b);
 }
