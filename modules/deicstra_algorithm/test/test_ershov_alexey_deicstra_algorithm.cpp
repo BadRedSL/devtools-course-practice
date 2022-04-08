@@ -1,6 +1,7 @@
 // Copyright 2022 Ershov Alexey
 
 #include <gtest/gtest.h>
+#include <vector>
 
 #include "./include/ershov_alexey_deicstra_algorithm.h"
 
@@ -50,7 +51,7 @@ TEST(Deicstra_Algorithm, Test_Top_Null_Vector_No_Throw) {
   ASSERT_NO_THROW(getDeicstra(graf, top));
 }
 
-TEST(Deicstra_Algorithm, Test_Single_Top_Ñorrectness) {
+TEST(Deicstra_Algorithm, Test_Single_Top_Correctness) {
   const std::vector<std::vector<size_t>> graf = {{10}};
   const size_t top = 0;
   const size_t count = graf.size();
