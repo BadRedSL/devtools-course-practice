@@ -1,7 +1,7 @@
 // Copyright 2022 Ershov Alexey
 
-#ifndef MODULES_ERSHOV_ALEXET_DEICSTRA_ALGORITHM_H_
-#define MODULES_ERSHOV_ALEXET_DEICSTRA_ALGORITHM_H_
+#ifndef MODULES_DEICSTRA_ALGORITHM_INCLUDE_ERSHOV_ALEXEY_DEICSTRA_ALGORITHM_H_
+#define MODULES_DEICSTRA_ALGORITHM_INCLUDE_ERSHOV_ALEXEY_DEICSTRA_ALGORITHM_H_
 
 #include <string>
 #include <vector>
@@ -17,4 +17,4 @@ std::vector<size_t> getDeicstra(
                                                     {14, 0, 2, 0, 9, 0}},
     size_t top = 0);
 
-#endif  // MODULES_ERSHOV_ALEXET_DEICSTRA_ALGORITHM_H_
+#endif  // MODULES_DEICSTRA_ALGORITHM_INCLUDE_ERSHOV_ALEXEY_DEICSTRA_ALGORITHM_H_
