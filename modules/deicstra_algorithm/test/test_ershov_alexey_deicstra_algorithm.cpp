@@ -160,8 +160,3 @@ TEST(Deicstra_Algorithm, Test_Last_Top_Two_Times_Random) {
 
   ASSERT_EQ(check, true);
 }
-
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
