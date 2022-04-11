@@ -35,8 +35,8 @@ std::vector<size_t> Algorithm::getDeicstra(
   std::vector<bool> visitedTops(count);
   std::vector<size_t> dist(count, 10000);
   dist[top] = 0;
-  int min_dist = 0;
-  int min_vertex = top;
+  size_t min_dist = 0;
+  size_t min_vertex = top;
 
   while (min_dist < 10000) {
     size_t i = min_vertex;
