@@ -9,9 +9,9 @@
 #include <utility>
 #include <vector>
 
-std::vector<std::vector<size_t>> getRandomVector(const size_t count) {
+std::vector<std::vector<size_t>> Algorithm::getRandomVector(
+    const size_t count) {
   std::vector<std::vector<size_t>> graf(count, std::vector<size_t>(count));
-  std::random_device dev;
   std::mt19937 gen(0);
   for (size_t i = 0; i < count; ++i) {
     graf[i][i] = 0;
@@ -23,8 +23,8 @@ std::vector<std::vector<size_t>> getRandomVector(const size_t count) {
   return graf;
 }
 
-std::vector<size_t> getDeicstra(const std::vector<std::vector<size_t>>& graf,
-                                size_t top) {
+std::vector<size_t> Algorithm::getDeicstra(
+    const std::vector<std::vector<size_t>>& graf, size_t top) {
   const size_t count = graf.size();
   if (graf.size() == 0) {
     return std::vector<size_t>(0);
