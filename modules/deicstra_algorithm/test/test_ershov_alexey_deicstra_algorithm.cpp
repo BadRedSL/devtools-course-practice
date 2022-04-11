@@ -6,7 +6,9 @@
 
 #include "./include/ershov_alexey_deicstra_algorithm.h"
 
-TEST(Algorithm, Test_Default_No_Throw) { ASSERT_NO_THROW(Algorithm deicstra); }
+TEST(Algorithm, Test_Default_No_Throw) {
+    ASSERT_NO_THROW(Algorithm deicstra);
+}
 
 TEST(Random_Vector, Test_Default_No_Throw) {
   Algorithm deicstra;
