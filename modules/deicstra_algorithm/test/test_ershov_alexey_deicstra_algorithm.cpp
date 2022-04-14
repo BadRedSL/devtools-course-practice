@@ -66,6 +66,20 @@ TEST(Deicstra_Algorithm, Test_Top_Null_Vector_No_Throw) {
   ASSERT_NO_THROW(deicstra.getDeicstra(graf, top));
 }
 
+TEST(Deicstra_Algorithm, Test_Default_Top_Null_Vector_No_Throw) {
+  const std::vector<std::vector<size_t>> graf = {};
+  Algorithm deicstra;
+  ASSERT_NO_THROW(deicstra.getDeicstra(graf));
+}
+
+TEST(Deicstra_Algorithm, Test_First_Top_Null_Vector_No_Throw) {
+  const std::vector<std::vector<size_t>> graf = {};
+  const size_t top = 0;
+  Algorithm deicstra;
+
+  ASSERT_NO_THROW(deicstra.getDeicstra(graf, top));
+}
+
 TEST(Deicstra_Algorithm, Test_Single_Top_Correctness) {
   const std::vector<std::vector<size_t>> graf = {{10}};
   const size_t top = 0;
