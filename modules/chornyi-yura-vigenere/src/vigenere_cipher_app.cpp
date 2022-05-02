@@ -12,8 +12,12 @@ std::string VigenereApplication::operator()(int argc, const char** argv) {
   if (argc < 2 || argc > 3) {
     return this->argument_error();
   }
-  if (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h") {
+  if (argc == 2 && (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h")) {
     return this->help();
+  }
+  if (argc == 2 &&
+      (std::string(argv[1]) != "--help" || std::string(argv[1]) != "-h")) {
+    return this->argument_error();
   }
 
   std::string arg1 = std::string(argv[1]);
