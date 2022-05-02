@@ -60,9 +60,9 @@ set_tests_properties (${prefix}_right_cipher_1 PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_calculates_correctly2
+    NAME ${prefix}_right_cipher_2
     COMMAND ${APPLICATION} HELLOWORLD HELLOWORLD
 )
-set_tests_properties (${prefix}_calculates_correctly2 PROPERTIES
+set_tests_properties (${prefix}_right_cipher_2 PROPERTIES
     PASS_REGULAR_EXPRESSION "OIWWCSCIWG"
     LABELS "${MODULE}")
