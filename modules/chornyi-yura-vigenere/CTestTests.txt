@@ -40,7 +40,7 @@ add_test(
     COMMAND ${APPLICATION} helloworld lemonlemon
 )
 set_tests_properties (${prefix}_fails_on_incorrect_data_1 PROPERTIES
-    PASS_REGULAR_EXPRESSION "Сipher error occurred!"
+    PASS_REGULAR_EXPRESSION "Cipher error occurred!"
     LABELS "${MODULE}")
 	
 add_test(
@@ -48,7 +48,7 @@ add_test(
     COMMAND ${APPLICATION} HELLOWORLD HELLOW
 )
 set_tests_properties (${prefix}_fails_on_incorrect_data_2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "Сipher error occurred!"
+    PASS_REGULAR_EXPRESSION "Cipher error occurred!"
     LABELS "${MODULE}")
 
 add_test(

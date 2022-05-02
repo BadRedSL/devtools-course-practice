@@ -20,18 +20,18 @@ set_tests_properties (${prefix}_can_print_help PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_fails_on_invalid_amout_of_args
+    NAME ${prefix}_fails_on_invalid_amout_of_args1
     COMMAND ${APPLICATION} --flag1 --flag2 --flag3
 )
-set_tests_properties (${prefix}_fails_on_invalid_amout_of_args PROPERTIES
+set_tests_properties (${prefix}_fails_on_invalid_amout_of_args1 PROPERTIES
     PASS_REGULAR_EXPRESSION "Invalid argument amount, try --help or -h command"
     LABELS "${MODULE}")
 	
 add_test(
-    NAME ${prefix}_fails_on_invalid_amout_of_args
+    NAME ${prefix}_fails_on_invalid_amout_of_args2
     COMMAND ${APPLICATION} --nohelp
 )
-set_tests_properties (${prefix}_fails_on_invalid_amout_of_args PROPERTIES
+set_tests_properties (${prefix}_fails_on_invalid_amout_of_args2 PROPERTIES
     PASS_REGULAR_EXPRESSION "Invalid argument amount, try --help or -h command"
     LABELS "${MODULE}")
 
@@ -40,7 +40,7 @@ add_test(
     COMMAND ${APPLICATION} helloworld lemonlemon
 )
 set_tests_properties (${prefix}_fails_on_incorrect_data_1 PROPERTIES
-    PASS_REGULAR_EXPRESSION "Сipher error occurred!!"
+    PASS_REGULAR_EXPRESSION "Сipher error occurred!"
     LABELS "${MODULE}")
 	
 add_test(
@@ -48,7 +48,7 @@ add_test(
     COMMAND ${APPLICATION} HELLOWORLD HELLOW
 )
 set_tests_properties (${prefix}_fails_on_incorrect_data_2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "Сipher error occurred!!"
+    PASS_REGULAR_EXPRESSION "Сipher error occurred!"
     LABELS "${MODULE}")
 
 add_test(
