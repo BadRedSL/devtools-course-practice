@@ -12,11 +12,8 @@ std::string VigenereApplication::operator()(int argc, const char** argv) {
   if (argc < 2 || argc > 3) {
     return this->argument_error();
   }
-  if (argc == 2 && (argv[1] == "--help" || argv[1] == "-h")) {
+  if (std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h") {
     return this->help();
-  }
-  if (argc == 2 && (argv[1] != "--help" || argv[1] != "-h")) {
-    return this->argument_error();
   }
 
   std::string arg1 = std::string(argv[1]);
@@ -27,7 +24,6 @@ std::string VigenereApplication::operator()(int argc, const char** argv) {
     vc.setPair(arg1, arg2);
     std::string result = vc.cipher();
     return result;
-
   } catch (std::invalid_argument& e) {
     return this->cipher_error(e);
   }

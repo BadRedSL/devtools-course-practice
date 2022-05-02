@@ -24,7 +24,6 @@ std::string VigenereApplication::operator()(int argc, const char** argv) {
     vc.setPair(arg1, arg2);
     std::string result = vc.cipher();
     return result;
-
   } catch (std::invalid_argument& e) {
     return this->cipher_error(e);
   }
@@ -47,6 +46,6 @@ std::string VigenereApplication::argument_error() {
 }
 
 std::string VigenereApplication::cipher_error(const std::invalid_argument& e) {
-  std::string error = std::string("") + "Ñipher error occurred!\n" + e.what();
+  std::string error = std::string("") + "Cipher error occurred!\n" + e.what();
   return error;
 }
