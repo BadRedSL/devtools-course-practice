@@ -26,14 +26,6 @@ add_test(
 set_tests_properties (${prefix}_fails_on_invalid_amout_of_args PROPERTIES
     PASS_REGULAR_EXPRESSION "Invalid argument amount, try --help or -h command"
     LABELS "${MODULE}")
-	
-add_test(
-    NAME ${prefix}_fails_on_invalid_amout_of_args
-    COMMAND ${APPLICATION} --nohelp
-)
-set_tests_properties (${prefix}_fails_on_invalid_amout_of_args PROPERTIES
-    PASS_REGULAR_EXPRESSION "Invalid argument amount, try --help or -h command"
-    LABELS "${MODULE}")
 
 add_test(
     NAME ${prefix}_fails_on_incorrect_data_1
